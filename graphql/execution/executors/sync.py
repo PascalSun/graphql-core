@@ -12,6 +12,6 @@ class SyncExecutor(object):
         pass
 
     def execute(self, fn, *args, **kwargs):
+        print(fn)
         # type: (Callable, *Any, **Any) -> Any
-        print('execute')
         return fn(*args, **kwargs)
