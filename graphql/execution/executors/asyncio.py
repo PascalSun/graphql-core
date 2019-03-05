@@ -55,11 +55,12 @@ class AsyncioExecutor(object):
     def wait_until_finished(self):
         # type: () -> None
         # if there are futures to wait for
-        # while self.futures:
+        while self.futures:
             # wait for the futures to finish
-        futures = self.futures
-        self.futures = []
-        self.loop.run_until_complete(wait(futures))
+            print('stuck in here')
+            futures = self.futures
+            self.futures = []
+            self.loop.run_until_complete(wait(futures))
 
     def clean(self):
         self.futures = []
