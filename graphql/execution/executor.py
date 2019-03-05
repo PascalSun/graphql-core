@@ -150,7 +150,7 @@ def execute(
         clean = getattr(exe_context.executor, "clean", None)
         if clean:
             clean()
-    print('return promise')
+    print('return promise out')
     return promise
 
 
