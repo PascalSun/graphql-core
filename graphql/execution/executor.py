@@ -146,7 +146,9 @@ def execute(
         print('in return promise')
         exe_context.executor.wait_until_finished()
         print('until finished done')
-        return promise.get()
+        result_test = promise.get()
+        print('promise get done')
+        return result_test
     else:
         clean = getattr(exe_context.executor, "clean", None)
         if clean:
