@@ -143,13 +143,14 @@ def execute(
     )
 
     if not return_promise:
+        print('return promise')
         exe_context.executor.wait_until_finished()
         return promise.get()
     else:
         clean = getattr(exe_context.executor, "clean", None)
         if clean:
             clean()
-
+    print('return promise')
     return promise
 
 
