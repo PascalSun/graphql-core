@@ -143,7 +143,7 @@ def execute(
     )
 
     if not return_promise:
-        print('return promise')
+        print('in return promise')
         exe_context.executor.wait_until_finished()
         return promise.get()
     else:
