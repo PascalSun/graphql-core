@@ -146,7 +146,7 @@ def execute(
         print('in return promise')
         exe_context.executor.wait_until_finished()
         print('until finished done')
-        result_test = promise.get(timeout=10) # tag bug is here
+        result_test = promise.get(timeout=5) # tag bug is here
         print('promise get done')
         return result_test
     else:
